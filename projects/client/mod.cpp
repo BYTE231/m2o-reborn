@@ -444,6 +444,10 @@ void m2o_module::tick(M2::I_TickedModuleCallEventContext &) {
         M2::Wrappers::Dialogs::ShowQuestDialog();
     }
 
+    if (GetAsyncKeyState(VK_F10) & 0x1) {
+        M2::Wrappers::Dialogs::ShowQuestDialog();
+    }
+
     if (input_key_down(VK_F9) & 0x1) {
         M2::Wrappers::lua::Execute("game.gui:ShowQuestDialog(\"pinup01_ps\",\"Text1\",\"\Text2\",\"Text3\")");
     }
